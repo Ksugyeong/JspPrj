@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/* reset---------------------------- */
+body{
+	margin: 0px;
+}
+h1{
+	margin: 0px;
+}
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+li{
+	display: block;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+/* ------abstract style---------------------------------------------------------- */
+
+/* ------component---------------------------------------------------------- */
+.btn{
+	
+}
+.btn-default{
+	background: #759d2a;
+	color: #ffffff;
+	min-width: 71px;
+	display: inline-block;
+	text-align: center;
+	padding: 3px 8px;
+	border-radius: 4px;
+}
+.btn-warning{
+	
+}
+.btn-cancel{
+	
+}
+
+/* ---------------------------------------------------------------- */
+.hor-menu{
+	display: inline-block;
+}
+
+.hor-menu > h1{
+	display: none;
+}
+
+.hor-menu > ul{
+	overflow: auto;
+ 
+}
+.hor-menu > ul > li{
+	float: left;
+	
+}
+
+.hor-menu.first-pad-none > ul > li:first-child{
+	padding-left: 0px; /*!import 우선순위를 높게 설정*/
+	background: none;
+	
+}
+
+/* -----header----------------------------------------------------------- */
+
+#header{
+	height: 70px;
+	
+}
+.main-menu{
+	/* border:1px solid red; */
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+}
+
+/* #main-menu > ul::after{
+	content:".";
+	display: block;
+	height: 0px;
+	overflow: hidden;
+	clear: left;
+	
+} */
+/* #main-menu > ul{
+	display: inline-block;  inline은 content 크기만큼만 
+ 
+} */
+.main-menu > ul > li{
+	padding-left: 24px;
+	background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+	
+}
+/* #main-menu > ul > li{
+	padding-left: 0px;
+	background: none;
+	
+} */
+
+/* ---------------------------------------------------------------- */
+
+.member-menu{
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	
+}
+.member-menu > ul > li{
+	
+	padding-left: 9px;
+	background: url("../images/bg-member-menu-sp.png") no-repeat 4px center;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+
+#visual{
+	height: 171px;
+	/* background: #313131 url("../images/bg-visual.png") no-repeat center; */
+	border-top:3px solid #8CBA34;
+	
+}
+#body{
+	min-height: 300px;
+	border-top:5px solid #8CBA34;
+	margin-top: 1px;
+}
+
+#footer{
+	height: 100px;
+	background: #313131;
+	
+}
+
+.root-container{
+	height: 100%;
+	min-height: inherit;
+	/* height: inherit; */
+	width: 960px;
+	/* opacity: 0.5; */
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#body>.root-container { /* > 자식 연산자 */
+	display: flex;
+	flex-direction: row;
+	background: url("../images/bg-body.png") repeat-y center;
+	/* flex-direction: column; */
+}
+
+#aside{
+	min-height: inherit;
+	min-width: 205px;
+	background: url("../images/bg-aside-title.png") no-repeat left top;
+	/* float: left; */
+}
+
+#main{
+	box-sizing: border-box;
+	min-height: inherit;
+	padding-left: 35px;
+	padding-top: 45px;
+	padding-bottom: 40px;
+	min-width: 755px;
+	/* float: left; */
+}
+
+#main>section>h1{
+	/* border:1px solid red; */
+	width: 100px;
+	height: 100px;
+	/* background:url("../images/logo.png") no-repeat 0px 0px; */
+	background-attachment: local;
+	/* overflow: scroll; */
+}
+
+.clear-fix::after{
+	content: "안녕하세요?";
+	display: block;
+	clear: both;
+	height: 0px;
+	overflow: hidden; /* overflow : 박스 밖 범위 */
+}
